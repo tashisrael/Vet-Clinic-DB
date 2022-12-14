@@ -10,4 +10,3 @@ CREATE TABLE animals (
     neutered boolean,
     weight_kg decimal
 );
-
