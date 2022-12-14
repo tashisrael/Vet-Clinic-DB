@@ -1,20 +1,13 @@
 /* Database schema to keep the structure of entire database. */
 
-CREATE DATABASE vet_clinic
-    WITH
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    CONNECTION LIMIT = -1
-    IS_TEMPLATE = False;
+create database vet_clinic;
 
-CREATE TABLE public.animals
-(
-    id integer NOT NULL,
-    name character varying(100),
+CREATE TABLE animals (
+    id serial PRIMARY KEY NOT NULL,
+    name varchar(100),
     date_of_birth date,
-    escape_attempts integer,
+    escape_attempts int,
     neutered boolean,
-    weight_kg numeric,
-    PRIMARY KEY (id)
+    weight_kg decimal
 );
 
