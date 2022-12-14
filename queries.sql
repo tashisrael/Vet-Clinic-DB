@@ -34,6 +34,9 @@ update animals set species = 'digimon' where name like '%mon';
 /* update species col for animals with names not ending in mon */
 update animals set species = 'pokemon' where species IS null;
 
+/* Confirm changes */
+SELECT * from animals;
+
 /* commit changes */
 COMMIT;
 
