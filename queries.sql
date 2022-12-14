@@ -55,3 +55,24 @@ ROLLBACK;
 
 /* verify all records still exist */
 SELECT * from animals;
+
+/* Begin Transaction D */
+BEGIN;
+
+/* Delete all animals born after Jan 1st, 2022. */
+DELETE from animals WHERE date_of_birth > '01-01-2022';
+
+/* create a savepoint */
+SAVEPOINT dob;
+
+/* update all animals' weights multiplied by -1 */
+UPDATE animals SET weight_kg =weight_kg * -1;
+
+/* roolback to savepoint */
+ROLLBACK TO dob;
+
+/* update all animals' weights that are negative multiplied by -1 */
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+
+/* commit the transaction */
+COMMIT;
