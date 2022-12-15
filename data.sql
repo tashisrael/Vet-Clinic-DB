@@ -21,3 +21,17 @@ VALUES
 ('Boarmon', '06-07-2005', 7, true, 20.4), 
 ('Blossom', '10-13-1998', 3, true, 17), 
 ('Ditto', '05-14-2022', 4, true, 22);
+
+/* INSERT data into owners table */
+INSERT INTO owners (full_name, age) 
+VALUES 
+('Sam Smith', 34), 
+('Jennifer Orwell', 19), 
+('Bob', 45), 
+('Melody Pond', 77), 
+('Dean Winchester', 14), 
+('Jodie Whittaker', 38);
+
+/* INSERT data into species table */
+INSERT INTO species (name) VALUES ('Pokemon'), ('Digimon');
+
